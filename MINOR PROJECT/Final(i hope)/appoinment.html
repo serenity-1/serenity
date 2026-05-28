@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="appoinment.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script type="module" src="appointment.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+      (function() {
+          emailjs.init("Hkw21pwHcwLS2VScV"); // Replace with your EmailJS user ID
+      })();
+  </script>
+</head>
+<body>
+
+<header>
+
+</header>
+<div id="google_translate_element">
+  <script>
+      function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+              pageLanguage: 'en'
+          }, 'google_translate_element');
+      }
+  </script>
+  <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</div>
+      
+        <div class="details">
+          <div class="wrapper-main">
+      
+            <p>We warmly invite you to visit our orphanage and experience the joy of connecting with our wonderful children. Your presence brings smiles and hope to their lives. By scheduling a visit, you'll have the opportunity to:<br>
+              
+              -Spend quality time with our children<br>
+              - Learn about our mission and programs<br>
+              - Understand how you can make a difference<br><br>
+              Please book a slot below to ensure a smooth and meaningful visit. We look forward to welcoming you!<br>
+                    9:00 - 11:00 <br>
+                    11:00 - 1:00<br>
+                    1:15 - 2:15 Lunch break(No visiting slots available)<br>
+                    2:30 - 4:30<br>
+                    4:30 - 6:00<br>
+                    6:00 onwards Prayer and regular routine(No visiting slots available)<br><br>
+              
+              <i>Note:</i><br>
+              
+              - Please arrive 15 minutes prior to your scheduled visit.<br>
+              - Kindly respect our children's privacy and follow our guidelines.<br>        
+                Thank you for caring!</b><br>
+            </p>
+          </div>
+        </div>
+<br>
+<center class="title"><b>APPOINTMENT FORM</b></center>
+<form id="appointmentForm">
+  <label for="name">Full Name:</label>
+  <input type="text" id="name" name="name" placeholder="Enter your name" required><br>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
+  
+  <label for="type">Type of Appointment:</label>
+  <select id="dropdown" name="type" required>
+    <option value="">Select an option</option>
+    <option value="bday">Birthday Celebration</option>
+    <option value="rememberance">Rememberance Day</option>
+    <option value="festival">Festival celebrations</option>
+    <option value="others">Others</option>
+  </select><br><br>
+
+  <label for="date">Date:</label>
+  <input type="date" id="date" name="date" required><br><br>
+  
+  <label for="time">Time:</label>
+  <input type="time" id="time" name="time" required><br><br>
+  
+  <center><input type="submit" value="Submit"></center>
+</form><br><br>
+<div id="message"></div>
+
+    <script>
+        document.getElementById('appointmentForm').addEventListener('submit', async function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const type = document.getElementById('dropdown').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+
+            // Create email parameters
+            const templateParams = {
+                to_email: email,
+                name: name,
+                type:type,
+                date: date,
+                time: time
+            };
+
+            try {
+                // Send confirmation email
+                const response = await emailjs.send('service_g2cnzef', 'template_zik6yis', templateParams); // Replace with your service ID and template ID
+                console.log('Confirmation email sent successfully!', response);
+                document.getElementById('message').innerText = 'Appointment booked successfully! A confirmation email has been sent.';
+            } catch (error) {
+                console.error('Error sending confirmation email:', error);
+                document.getElementById('message').innerText = 'Error sending confirmation email: ' + error.message;
+            }
+        });
+    </script>
+
+<div class="para">
+  <p>"Spread love and kindness by visiting our residents! ..."
+  </p><br><br><br>
+</div>
+
+
+<nav>
+  <button type="button" onclick="location.href='home.html'" class="home"> Home </button>
+</nav>
+
+<!-- Page footer -->
+<footer>
+  <div class="container1">
+    <div class="footer-content">
+      <h3>Contact Us</h3>
+      <p>Email : serenityfoundationn@gmail.com</p>
+      <p>Phone : 9819223977 , 6238594425 , 859037050</p>
+      <p>Address : SRRA-5, Amrita Nagar, North Edapally, Ernakulam, Kerala, India.</p>
+    </div>
+    <div class="footer-content">
+      <h3>Quick links</h3>
+      <ul class="list">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="donation1.html">Donate</a></li>
+        <li><a href="appoinment.html">Appoinment</a></li>
+        <li><a href="resident.html">Residents</a></li>
+        <li><a href="record.html">Record Request</a></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </div>
+    <div class="footer-content">
+      <h3>Follow Us</h3>
+      <ul class="social-icons">
+        <li><a href=""><i class="fab fa-facebook"></i></a></li>
+        <li><a href=""><i class="fab fa-twitter"></i></a></li>
+        <li><a href=""><i class="fab fa-instagram"></i></a></li>
+        <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

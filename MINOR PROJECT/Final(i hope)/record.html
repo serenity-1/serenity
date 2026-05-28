@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recordrequest</title>
+    <link rel="stylesheet" type="text/css" href="record.css">
+    <script type="module" src="record.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<header>
+
+</header>
+<div id="google_translate_element">
+  <script>
+      function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+              pageLanguage: 'en'
+          }, 'google_translate_element');
+      }
+  </script>
+  <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</div>
+<body>
+
+    <br>
+  <center class="title"><b>EDUCATIONAL/MEDICAL RECORD REQUEST FORM</b></center>
+  <div class="para">
+    <center><p>Please fill out the form below to request the educational or medical records of our facility resident.
+    </p></center><br><br>
+
+    <form id="record-request-form">
+        <!-- Resident information section -->
+        <section>
+          <h3>Resident Information</h3>
+          <label for="resident-name">Resident's Name:</label>
+          <input type="text" id="resident-name" name="resident-name" required pattern="[a-zA-Z ]+"><br>
+          <label for="resident-id">Resident's ID:</label>
+          <input type="text" id="resident-id" name="resident-id"><br>
+        </section>
+      
+        <!-- Record type section -->
+        <section>
+          <h3>Record Type</h3>
+          <label for="record-type">Select the type of record you are requesting:</label>
+          <select id="record-type" name="record-type" required>
+            <option value="">Select an option</option>
+            <option value="educational">Educational Records</option>
+            <option value="medical">Medical Records</option>
+            <option value="both">Both Educational and Medical Records</option><br>
+          </select>
+        </section>
+      
+        <!-- Requester information section -->
+        <section>
+          <br><h3>Your Information</h3>
+          <label for="requester-name">Your Name:</label>
+          <input type="text" id="requester-name" name="requester-name" required pattern="[a-zA-Z ]+">
+          <label for="requester-email">Your Email:</label>
+          <input type="email" id="requester-email" name="requester-email" required>
+          <label for="requester-phone">Your Phone Number:</label>
+          <input type="tel" id="requester-phone" name="requester-phone" pattern="[0-9]{10}">
+        </section>
+      
+        <!-- Additional information section -->
+        <section>
+          <br><h3>Additional Information</h3>
+          <label for="additional-info">Please provide any additional information that may be helpful in processing your request:</label>
+          <textarea id="additional-info" name="additional-info"></textarea>
+        </section>
+      
+        <center><button type="submit">Submit</button></center>
+      </form>
+</div>
+
+<div class="para">
+<p>Once your request is submitted, our team will process it promptly. You can expect to receive the requested records within three working days. If you do not receive the records within this timeframe, please contact us at <b>serenityfoundationn@gmail.com</b> to inquire about the status of your request. We appreciate your patience and cooperation.
+
+</p><br><br><br>
+  </div>
+
+ 
+
+
+    
+  <nav>
+    <button class="home" type="button" onclick="location.href='home.html'"> Home </button>
+  </nav>
+
+  <footer>
+    <div class="container1">
+        <div class="footer-content">
+            <h3>Contact Us</h3>
+            <p>Email : serenityfoundationn@gmail.com</p>
+            <p>Phone : 9819223977 , 6238594425 , 859037050</p>
+            <p>Address : SRRA-5,Amrita Nagar,North Edapally,<br>Ernakulam,Kerela,India.</p>
+        </div>
+        <div class="footer-content">
+            <h3>Quick links</h3>
+            <ul class="list">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="donation1.html">Donate</a></li>
+                <li><a href="appoinment.html">Appoinment</a></li>
+                <li><a href="resident.html">Residents</a></li>
+                <li><a href="record.html">Record Request</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </div>
+        <div class="footer-content">
+            <h3>Follow Us</h3>
+            <ul class="social-icons">
+            <li><a href=""><i class="fab fa-facebook"></i></a></li>
+            <li><a href=""><i class="fab fa-twitter"></i></a></li>
+            <li><a href=""><i class="fab fa-instagram"></i></a></li>
+            <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+        </div>
+    </div>
+  </footer>
+
+
+</body>
+</html>

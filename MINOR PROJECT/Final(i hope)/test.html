@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button><a href="signup.html">button</a></button>
+</body>
+</html>
+
+
+
+
+
+
+<form>
+	<label for="name">Name:</label>
+	<input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
+	<label for="street">Street:</label>
+	<input type="text" id="street" name="street" placeholder="Enter your street address"><br><br>
+	<label for="city">City:</label>
+	<input type="text" id="city" name="city" placeholder="Enter your city"><br><br>
+	<label for="state">State:</label>
+	<input type="text" id="state" name="state" placeholder="Enter your state"><br><br>
+	<label for="zip">Zip:</label>
+	<input type="text" id="zip" name="zip" placeholder="Enter your zip code"><br><br>
+	<label for="country">Country:</label>
+	<input type="text" id="country" name="country" placeholder="Enter your country"><br><br>
+	<input type="submit" value="Submit">
+</form>
+<div class="gender-box">
+	<h3>Gender</h3>
+	<div class="gender-option">
+		<div class="Gender">
+			<input type="radio" id="check" name="Gender"/>
+			<label for="check-male">Male</label>
+		</div>
+		<div class="Gender">
+			<input type="radio" id="check" name="Gender"/>
+			<label for="check-female">Female</label>
+		</div>
+		<div class="Gender">
+			<input type="radio" id="check" name="Gender"/>
+			<label for="check-other">Prefer not to say</label>
+		</div>
+	</div>
+</div>
+
+
+
+.form .gender-box{
+	margin-top: 20px;
+  }
+  .gender-box h3{
+	color:#333;
+	font-size: 1rem;
+	font-weight: 400;
+	margin-bottom: 8px;
+  }
+
+
+  form :where(.gender-option,.gender){
+	display: flex;
+	align-items: center;
+	column-gap: 50px;
+	flex-wrap: wrap;
+  }
+  .form .gender{
+	column-gap: 5px;
+  }
+  .gender input{
+	accent-color: rgb(130,106,251);
+  }
+  .form :where(.gender input,.gender label ){
+	cursor: pointer;
+  }

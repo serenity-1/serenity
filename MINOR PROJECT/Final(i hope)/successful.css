@@ -1,0 +1,53 @@
+body{
+    margin:0px ;
+    padding: 0px;
+
+}
+.background{
+    width:100%;
+    height: 100vh;
+    background-image: url("successful.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    color: black;
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    color: black;
+  }
+
+  nav li {
+    margin-right: 1rem;
+    color: black;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    top:15px;
+    right:100px;
+    font-size: 18px;
+  }
+  button {
+    background-color: rgb(11, 4, 41);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }

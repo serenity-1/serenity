@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donation page</title>
+  <link rel="stylesheet" href="feedback.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <section class="contact">
+        <h2>FEEDBACK</h2>
+        <form id="feedbackForm" method="POST">
+            <input type="hidden" name="access_key" value="04ead8b0-b025-4ff0-a80b-a6fc48119fbf">
+            <div class="input-box">
+                <div class="input-field field">
+                    <input type="text" placeholder="Full Name" id="name" class="item" autocomplete="off" required>
+                </div>
+                <div class="input-field field">
+                    <input type="email" placeholder="Email Address" id="email" class="item" autocomplete="off" required>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <div class="input-field field">
+                    <input type="text" placeholder="Phone No." id="phone" class="item" autocomplete="off" required>
+                </div>
+                <div class="input-field field">
+                    <input type="text" placeholder="Subject" id="subject" class="item" autocomplete="off" required>
+                </div>
+            </div>
+
+            <div class="textarea-field field">
+                <textarea id="message" cols="30" rows="10" placeholder="Your Message" class="item" autocomplete="off" required></textarea>
+            </div>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="contact.js"></script>
+
+
+    <script>
+        document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            // Send email using SMTP.js
+            Email.send({
+                SecureToken: "https://smtpjs.com/v3/smtp.js", // Replace with your actual secure token
+                To: 'serenityfoundationn@gmail.com',
+                From: email,
+                Subject: subject,
+                Body: `Name: ${name}<br>Email: ${email}<br>Phone: ${phone}<br>Message: ${message}`
+            }).then(
+                response => {
+                    if (response === 'OK') {
+                        Swal.fire('Success', 'Your feedback has been sent!', 'success');
+                    } else {
+                        Swal.fire('Error', 'There was an error sending your feedback. Please try again later.', 'error');
+                    }
+                }
+            ).catch(error => {
+                Swal.fire('Error', 'There was an error sending your feedback. Please try again later.', 'error');
+            });
+        });
+    </script>
+
+    <button type="button" id="buttonhome" onclick="location.href='home.html'"> Home </button>
+</body>
+</html>

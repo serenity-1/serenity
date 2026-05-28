@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="sy1.css">
+</head>
+<body>
+    <div class="admin">
+        <h2>Admin Login</h2>
+        <form id="AdminForm">
+            <label for="username">Username:</label>
+            <input type="text" id="uname" name="uname" placeholder="Username" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Password" required><br><br>
+            <button type="submit">Login</button>
+            <p>If you're not an admin? <a href="login.html" id="show-login">Log In</a> / <a href="signup.html" id="show-signup">Signup</a></p>
+        </form>
+    </div>
+
+    <!-- Google Translate -->
+    <div id="google_translate_element"></div>
+
+    <!-- Google Translate Script -->
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en'
+            }, 'google_translate_element');
+        }
+    </script>
+    <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- Admin Login Validation Script -->
+    <script>
+        // Define the correct admin credentials
+        const adminCredentials = {
+            username: 'admin',  // Admin username
+            password: 'admin@123'  // Admin password (In real life, hash passwords on the server!)
+        };
+
+        // Get form and input elements
+        const adminForm = document.getElementById('AdminForm');
+        const usernameInput = document.getElementById('uname');
+        const passwordInput = document.getElementById('password');
+
+        // Listen for form submission
+        adminForm.addEventListener('submit', function (event) {
+            event.preventDefault();  // Prevent the form from submitting to the server
+
+            const enteredUsername = usernameInput.value;
+            const enteredPassword = passwordInput.value;
+
+            // Check if the entered credentials match the admin credentials
+            if (enteredUsername === adminCredentials.username && enteredPassword === adminCredentials.password) {
+                // Redirect to the admin dashboard if credentials match
+                window.location.href = 'admindash.html';
+            } else {
+                // Show an error if the credentials do not match
+                alert('Invalid username or password!');
+            }
+        });
+    </script>
+
+</body>
+</html>

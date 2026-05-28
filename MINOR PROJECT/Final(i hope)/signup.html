@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" type="text/css" href="sy2.css">
+    
+    <!-- Include PocketBase from CDN -->
+    <script src="https://unpkg.com/pocketbase@0.12.0/dist/pocketbase.umd.js"></script>
+    
+    <!-- Load your JavaScript file (without type="module") -->
+    <script src="signup.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Signup</h2>
+        <form id="signupForm">
+            <label for="uname">Username</label>
+            <input type="text" id="uname" name="uname" placeholder="Username" required>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Full Name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email Address" required>
+            <label for="phno">Phone Number</label>
+            <input type="text" id="phno" name="phno" placeholder="Phone Number" required>
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" placeholder="Address" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <label for="confirm_password">Confirm Password</label>
+            <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required><br>
+            <button type="submit">Signup</button>
+            <p>Already have an account? <a href="login.html" id="show-login">Log In</a></p>
+        </form>
+        <div id="google_translate_element"></div>
+        <script>
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'en'
+                }, 'google_translate_element');
+            }
+        </script>
+        <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+*{
+   
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height: 100vh;
+    background-image: url("c.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 60px
+}
+
+
+
+h2{
+    font-size: 30px;
+    color: rgb(6, 6, 61);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contact form {
+    width: 600px;
+    text-align: center;
+}
+
+form .input-box{
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-box .input-field{
+    width: 48.5%;
+}
+
+.field .item{
+    width: 100%;
+    padding: 18px;
+    background: transparent;
+    border: 2px solid rgb(6,6,61);
+    outline: none;
+    border-radius:6px ;
+    font-size: 16px;
+    color: black;
+    margin: 12px 0;
+}
+
+.field.error .item{
+    border-color: red;
+}
+
+.field.error-txt{
+    font-size: 14.5px;
+    color: red;
+    text-align: left;
+    margin: -5px 0 10px;
+    display: none;
+}
+
+
+
+
+.field .item::placeholder{
+    color: grey;
+}
+
+form .textarea-field .item{
+    resize: none;
+    height: 100px; 
+    font-size: 14px;
+}
+
+form button{
+    padding:12px 32px ;
+    background: rgb(6, 6, 61);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgb(6, 6, 61);
+    font-size: 11px;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 10;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 0px;
+    transition: 1.5s;
+    
+}
+
+
+#buttonhome {
+    background-color: rgb(11, 4, 41);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    top: 0;
+    right: 0;
+    margin-top: 10px; 
+    margin-right: 20px;
+  }
+
+ form button:hover{
+    box-shadow: none;
+    background-color: #0f5a97; /* Darker green for hover */
+    cursor: pointer;
+ } 
+

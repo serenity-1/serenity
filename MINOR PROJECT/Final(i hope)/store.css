@@ -1,0 +1,170 @@
+header {
+    background: url(store1.png);
+    background-position: center;
+    background-size: cover;
+    min-height: 500px;
+}
+
+section {
+    padding-bottom: 4vw;
+    padding-top: 4vw;
+}
+
+.responsive-img {
+    max-width: 400px; /* adjust this value to your desired width */
+    height: auto;
+}
+
+h4{
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(8, 8, 58);
+    margin-top: 20px;
+    margin-bottom: 13px;
+    text-align: center;
+}
+
+
+
+
+  
+  
+  button {
+    background-color: rgb(11, 4, 41);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+
+  .top-left-btn {
+    position: absolute;
+    top: 520px;
+    left: 1000px;
+    margin: 15px;
+    background-color: rgb(8, 10, 66);
+    color: rgb(253, 253, 253);
+    padding: 1rem 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.top-left-btn:hover {
+    background-color: gray;
+    color:black;
+}
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    background:rgb(4, 4, 46);
+    padding-top: 20px; /* Reduced padding-top value */
+    color: white;
+  }
+  .container1{
+    width: 80%; /* Increased container width */
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+  .footer-content{
+    width: 33.3%;
+  }
+  h3{
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  .footer-content p{
+    width: 190px;
+    margin: auto;
+    padding: 7px;
+  }
+  .footer-content ul{
+    text-align: center;
+  }
+  .list{
+    padding: 0;
+  }
+  .list li{
+    width: auto;
+    text-align: center;
+    list-style-type: none;
+    padding: 7px;
+    position: relative;
+  }
+  .list li::before{
+    content: '';
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background:beige;
+    transition-duration: .5s;
+  }
+  .list li:hover::before{
+    width: 70px;
+  }
+  .social-icons{
+    text-align: center;
+    padding: 0;
+  }
+  .social-icons li{
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+  }
+  .social-icons i{
+    color: white;
+    font-size: 25px;
+  }
+  a{
+    text-decoration: none;
+  }
+  a:hover{
+    color: beige;
+  }
+  .social-icons i:hover{
+    color:beige;
+  }
+
+
+  
+#google_translate_element {
+  font-size: 12px; /* Adjusts the font size */
+  width: 150px;    /* Sets a specific width for the dropdown */
+  top:500px;
+}
+
+#google_translate_element select {
+  padding: 2px;    /* Reduces padding in the dropdown */
+  font-size: 12px; /* Adjusts the font size of the dropdown */
+}
+
+#google_translate_element .goog-te-gadget {
+  height: auto;    /* Ensures the height is adjustable */
+}
+
+/* Targeting the Google logo/image */
+#google_translate_element img {
+  width: 50px;     /* Adjust the width of the logo */
+  height: auto;    /* Maintain aspect ratio */
+  margin-top: 5px; /* Optional: Adjusts the spacing above the logo */
+}
+

@@ -1,0 +1,155 @@
+header{
+    background: url(final4.png);
+    background-position: center;
+    background-size: cover;
+    min-height: 500px;
+}
+section{
+    padding-bottom: 4vw;
+    padding-top: 4vw;
+    
+}
+.tabs .indicator{
+    background-color: black;
+}
+.tabs .tab a:hover, .tabs .tab a:focus.active{
+    background-color: transparent;
+}
+h2{
+    color:rgb(19, 26, 63);
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    background-color:white;
+}
+
+button {
+    background-color: rgb(11, 4, 41);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+
+
+  
+
+
+
+
+  footer{
+    background:rgb(4, 4, 46);
+    padding-top: 20px; /* Reduced padding-top value */
+    color: white;
+}
+.container1{
+    width: 80%; /* Increased container width */
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    
+}
+.footer-content{
+    width: 33.3%;
+}
+h3{
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.footer-content p{
+    width: 190px;
+    margin: auto;
+    padding: 7px;
+}
+.footer-content ul{
+    text-align: center;
+}
+.list{
+    padding: 0;
+}
+.list li{
+    width: auto;
+    text-align: center;
+    list-style-type: none;
+    padding: 7px;
+    position: relative;
+}
+.list li::before{
+    content: '';
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background:beige;
+    transition-duration: .5s;
+}
+.list li:hover::before{
+    width: 70px;
+}
+.social-icons{
+    text-align: center;
+    padding: 0;
+}
+.social-icons li{
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+}
+.social-icons i{
+    color: white;
+    font-size: 25px;
+}
+a{
+    text-decoration: none;
+}
+.list a:hover{
+    color: beige;
+}
+.social-icons i:hover{
+    color:beige;
+}
+
+
+
+.container1 h2{
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(7, 7, 45);
+}
+
+
+.container1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    flex: 1;
+    margin: 10px;
+    max-width: 400px;
+    padding: 10px; /* adjust the max width to your liking */
+  }
+  
+  .card img {
+    width: 100%;
+    height: 150px; /* adjust the height to your liking */
+    object-fit: cover;
+  }
+  
+  .card h3 {
+    margin-top: 0;
+  }
+  
+  .card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }

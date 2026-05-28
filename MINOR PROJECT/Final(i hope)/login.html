@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="sy1.css">
+    <script src="https://unpkg.com/pocketbase@0.12.0/dist/pocketbase.umd.js"></script>
+    <script src="login.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email Address" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password" required><br>
+            <a href="forgot.html" id="forgot-password">Forgot Password?</a>
+
+
+            <button type="submit">Login</button>
+            <p>Don't have an account? <a href="signup.html" id="show-signup">Sign Up</a></p>
+            <p>Are you an admin? <a href="adminn.html" id="show-signup">Login</a></p>
+        </form>
+    </div>
+    <div id="google_translate_element"></div>
+	<script>
+		function googleTranslateElementInit() {
+			new google.translate.TranslateElement({
+				pageLanguage: 'en'
+			}, 'google_translate_element');
+		}
+	</script>
+	<script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>

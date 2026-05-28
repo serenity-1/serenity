@@ -1,0 +1,93 @@
+body {
+    font-family: "Times New Roman", serif;
+    margin: 20px;
+    color:rgb(5, 5, 5); 
+    background-image: url(t2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+h1{
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 20px;
+    color:white;
+}
+.resident-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    padding: 20px;
+    background-color: #f7f7f7; /* Add a background color to the container */
+    border: 1px solid #ddd; /* Add a border to the container */
+    border-radius: 10px; /* Add a border radius to the container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a box shadow to the container */
+}
+
+.container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display:grid;
+    grid-template-columns: repeat(5,1fr);
+    gap:20px;
+}
+
+.container li {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.container img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+
+.emergency {
+    color: red; /* Make the text red */
+}
+
+.emergency-image img {
+    border: 2px solid rgb(247, 126, 126); /* Add a red border to the image */
+    box-shadow: 0 0 10px rgb(204, 7, 7); /* Add a red glow effect to the image */
+}
+
+.red-glow {
+    border: 2px solid red;
+    box-shadow: 0 0 10px red;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    color: black;
+  }
+
+  .home {
+    background-color: beige;
+    color:rgb(7, 7, 58);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }

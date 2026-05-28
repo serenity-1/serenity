@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel=" stylesheet" type="text/css" href="donation.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<header>
+
+
+
+</header>
+<body>
+  <br>
+
+  <div class="details">
+    <div class="wrapper-main">
+
+
+
+      <h4>DONATIONS</h4><br>
+      <p><b>Serenity Foundation</b> meets all the expenses through donations received from kind-hearted souls. You can contribute to the residents' well-being through donations:<br><br>
+        One meal-a-day for the facility residents: Rs. 3000.00<br>
+        One day meal for the facility residents: Rs. 6000.00<br>
+        One year expenditure of one child: Rs. 15000.00<br>
+        One year’s educational expenditure of one child: Rs. 5000.00<br>
+        One pair of Uniform (Dresses): Rs. 800.00<br>
+        We welcome contributions towards infrastructural expansions as well.<br><br>
+      </p>
+    </div>
+  </div>
+
+  <center class="title"><b>DONATION FORM</b></center>
+  <form action="connect.php" method="POST">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your Full name"><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter Email" "><br>
+    <label for="phone">Phone No. :</label>
+    <input type="text" id="phone" name="phone" placeholder="Enter phone number(must be 10 digits)" pattern="[0-9]{10}"><br>
+    <label for="pan">PAN No. :</label>
+    <input type="text" id="pan" name="pan" placeholder="Enter PAN number(in the proper format)" pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}"><br>
+  
+
+
+    <label for="type">Type of Donation:</label>
+    <select id="dropdown" name="type" required>
+      <option value="">Select an option</option>
+      <option value="dress">Dress</option>
+      <option value="money">Money</option>
+      <option value="books">Books</option>
+      <option value="others">Support a specific resident</option><br><br>
+    </select>
+    
+    <!-- Textfield will be added here -->
+    <div id="resident-name-container"></div>
+    
+    <script>
+      const dropdown = document.getElementById('dropdown');
+      const residentNameContainer = document.getElementById('resident-name-container');
+    
+      dropdown.addEventListener('change', () => {
+        const selectedValue = dropdown.value;
+        if (selectedValue === 'others') {
+          const textfield = document.createElement('input');
+          textfield.type = 'text';
+          textfield.id = 'resident-name';
+          textfield.name = 'resident-name';
+          textfield.placeholder = 'Enter the resident\'s name';
+          residentNameContainer.innerHTML = '';
+          residentNameContainer.appendChild(textfield);
+        } else {
+          residentNameContainer.innerHTML = '';
+        }
+      });
+    </script>
+
+
+
+
+    <label for="amount">Donated Amount:</label>
+    <input type="text" id="amount" name="amount" placeholder="Enter the amount or just write NULL"><br>
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" required><br>
+
+    
+   
+  </form>
+  <center><button id="rzp-button" class="pay">Proceed to pay</button></center>
+
+  
+
+  <script>
+    document.getElementById('rzp-button').onclick = function(e) {
+      e.preventDefault(); // Prevent the form from submitting
+  
+      var apiKey = "rzp_test_W6o3G1bafo3Ylq"; // Replace with your Razorpay API key
+      var amount = document.getElementById('amount').value * 100; // Amount in paise
+      var options = {
+        "key": apiKey,
+        "amount": amount,
+        "currency": "INR",
+        "name": "Serenity Foundation",
+        "description": "Donation to Serenity Foundation",
+        "image": "https://example.com/logo.png",
+        "order_id": "", // Update with the order ID
+        "handler": function(response) {
+          // Handle payment response
+          console.log(response);
+          // Update your database with the payment response
+        },
+        "prefill": {
+          "name": "",
+          "email": "",
+          "contact": ""
+        },
+        "notes": {
+          "address": "Serenity Foundation"
+        },
+        "theme": {
+          "color": "#F37254"
+        }
+      };
+  
+      var rzp1 = new Razorpay(options);
+  
+      rzp1.open();
+      e.preventDefault();
+    };
+  </script>
+  <nav>
+    <button class="home" type="button" onclick="location.href='home.html'"> Home </button>
+  </nav>
+  
+  
+   <!--page footer-->
+   <footer>
+    <div class="container1">
+        <div class="footer-content">
+            <h3>Contact Us</h3>
+            <p>Email : serenityfoundationn@gmail.com</p>
+            <p>Phone : 9819223977 , 6238594425 , 859037050</p>
+            <p>Address : SRRA-5,Amrita Nagar,North Edapally,<br>Ernakulam,Kerela,India.</p>
+        </div>
+        <div class="footer-content">
+            <h3>Quick links</h3>
+            <ul class="list">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="donation.html">Donate</a></li>
+                <li><a href="appoinment.html">Appoinment</a></li>
+                <li><a href="resident.html">Residents</a></li>
+                <li><a href="record.html">Record Request</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </div>
+        <div class="footer-content">
+            <h3>Follow Us</h3>
+            <ul class="social-icons">
+            <li><a href=""><i class="fab fa-facebook"></i></a></li>
+            <li><a href=""><i class="fab fa-twitter"></i></a></li>
+            <li><a href=""><i class="fab fa-instagram"></i></a></li>
+            <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+        </div>
+    </div>
+  </footer>
+  
+  
+  </body>
+  </html>

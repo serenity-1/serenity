@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serenity Foundation Donation</title>
+  <link rel="stylesheet" type="text/css" href="donation.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pocketbase@0.8.0/dist/pocketbase.umd.js"></script>
+  <script src="donation.js" defer></script> <!-- Link donation.js -->
+</head>
+
+<body>
+  <header>
+    
+    
+  </header>
+
+  <div id="google_translate_element">
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en'
+            }, 'google_translate_element');
+        }
+    </script>
+    <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</div>
+  <section class="details">
+    <div class="wrapper-main">
+      <h4>DONATIONS</h4>
+      <p><b>Serenity Foundation</b> meets all expenses through donations from kind-hearted souls. Contributions can be made for various needs:</p>
+      <ul>
+        <li>One meal-a-day for facility residents: Rs. 3000.00</li>
+        <li>One day meal for facility residents: Rs. 6000.00</li>
+        <li>One year expenditure for one child: Rs. 15000.00</li>
+        <li>One year’s educational expenditure for one child: Rs. 5000.00</li>
+        <li>One pair of Uniform (Dresses): Rs. 800.00</li>
+        <li>Infrastructural expansion contributions are also welcome.</li>
+      </ul>
+    </div>
+  </section>
+
+  <center class="title"><b>DONATION FORM</b></center>
+  <form id="donation-form">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your full name" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
+
+    <label for="phone">Phone No.:</label>
+    <input type="text" id="phone" name="phone" placeholder="Enter phone number (10 digits)" pattern="[0-9]{10}" required><br>
+
+    <label for="pan">PAN No.:</label>
+    <input type="text" id="pan" name="pan" placeholder="Enter PAN number (format: 5 letters, 4 numbers, 1 letter)" pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" required><br>
+
+    <label for="type">Type of Donation:</label>
+    <select id="dropdown" name="type" required>
+      <option value="">Select an option</option>
+      <option value="dress">Dress</option>
+      <option value="money">Money</option>
+      <option value="books">Books</option>
+      <option value="others">Support a specific resident</option>
+    </select><br>
+
+    <!-- Container for additional fields for 'Support a specific resident' -->
+    <div id="resident-details-container"></div>
+
+    <label for="amount">Donated Amount:</label>
+    <input type="number" id="amount" name="amount" placeholder="Enter the amount or write '0'" required><br>
+
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" required><br>
+
+    <center><button id="rzp-button" class="pay">Proceed to pay</button></center>
+  </form>
+
+
+
+
+
+
+
+  <nav>
+    <button class="home" type="button" onclick="location.href='home.html'">Home</button>
+  </nav>
+
+  
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container1">
+      <div class="footer-content">
+        <h3>Contact Us</h3>
+        <p>Email: serenityfoundationn@gmail.com</p>
+        <p>Phone: 9819223977, 6238594425, 859037050</p>
+        <p>Address: SRRA-5, Amrita Nagar, North Edapally, Ernakulam, Kerala, India.</p>
+      </div>
+      <div class="footer-content">
+        <h3>Quick Links</h3>
+        <ul class="list">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="donation1.html">Donate</a></li>
+          <li><a href="appointment.html">Appointment</a></li>
+          <li><a href="resident.html">Residents</a></li>
+          <li><a href="record.html">Record Request</a></li>
+          <li><a href="store.html">Store</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+      </div>
+      <div class="footer-content">
+        <h3>Follow Us</h3>
+        <ul class="social-icons">
+          <li><a href=""><i class="fab fa-facebook"></i></a></li>
+          <li><a href=""><i class="fab fa-twitter"></i></a></li>
+          <li><a href=""><i class="fab fa-instagram"></i></a></li>
+          <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

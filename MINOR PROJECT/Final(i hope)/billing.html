@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="billing.css">
+</head>
+<body>
+    
+    <section class="container">
+        <header><b><b>BILLING FORM</b></b></header>
+        
+        <form action ='#' class="form">
+            <div class="input-box">
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter full name" required/>
+            </div>
+
+            <div class="input-box">
+                <label>Email Address</label>
+                <input type="text" placeholder="Enter Email Address" required/>
+            </div>
+
+            <div class="column">
+                <div class="input-box">
+                    <label>Phone Number</label>
+                    <input type="text" placeholder="Enter Phone Number" required/>
+                </div>
+                <div class="input-box Address">
+                    <label>Address</label>
+                    <input type="text" placeholder="Enter the Street Address" required/>
+                    <input type="text" placeholder="Enter the Street Address line 2" required/>
+                    <div class="select-box">
+                        <select>
+                            <option hidden>country</option>
+                            <option>India</option>
+                            <option>America</option>
+                            <option>Russia</option>
+                            <option>Japan</option>
+                            <option>other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Enter the city" required/>
+                    </div>
+                    <div class="column">
+                        <input type="text" placeholder="Enter the region" required/>
+                        <input type="text" placeholder="Enter postal" required/>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <!-- Remove the pay-btn and amount elements -->
+<form id="payment-form">
+    <button id="pay-btn">Proceed to Pay</button>
+  </form>
+  
+    
+        
+    </section>
+    
+    <div id="google_translate_element"></div>
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en'
+            }, 'google_translate_element');
+        }
+    </script>
+    <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</div>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pocketbase@0.8.0/dist/pocketbase.umd.js"></script>
+    <script src="billing.js"></script>
+</body>
+</html>
+
+
+
